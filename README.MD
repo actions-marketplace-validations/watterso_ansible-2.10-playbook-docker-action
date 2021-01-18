@@ -4,7 +4,7 @@ This action uses Ansible 2.10 to run the specified playbook.
 
 ## Inputs
 
-### `ansible_vault_passwordt`
+### `ansible_vault_password`
 
 **Required** The password to use with ansible-vault to decrypt the ssh private key.
 
