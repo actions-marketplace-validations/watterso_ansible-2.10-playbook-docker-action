@@ -9,6 +9,4 @@ mkdir -p ~/.ssh
 echo "${INPUT_ANSIBLE_VAULT_PASSWORD}" > ~/.ssh/vault_key
 ansible-vault decrypt ${INPUT_ENCRYPTED_SSH_PRIVATE_KEY_PATH} --vault-password-file ~/.ssh/vault_key
 
-ansible-galaxy install -r requirements.yaml
-
 ansible-playbook ${INPUT_PLAYBOOK_PATH} -e "${INPUT_EXTRAVARS_STRING}" --user root --key-file ${INPUT_ENCRYPTED_SSH_PRIVATE_KEY_PATH}

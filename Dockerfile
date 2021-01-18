@@ -1,4 +1,4 @@
-FROM cytopia/ansible:2.10-tools
+FROM watterso/docker-ansible-2.10-with-cloud-provider-roles:latest
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
