@@ -1,0 +1,23 @@
+name: Execute Playbook with Ansible 2.10
+author: James W
+description: Executes an ansible playbook with the latest version of Ansible 2.10.x. Opinionated with inflexible inputs.
+inputs:
+  ansible_vault_password:
+    description: The password to use with ansible-vault to decrypt the ssh private key.
+    required: true
+  encrypted_ssh_private_key_path:
+    description: The path to the ssh private key that has been encrypted with ansible-vault.
+    required: true
+  playbook_path:
+    description: The path to the playbook to run.
+    required: true
+  extravars_string:
+    description: The string of extra vars to include with the playbook invocation. In the format that you would include in the command line.
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'book'
+  color: 'blue'
